@@ -1,5 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./styles/fonts.css";
+
+body {
+  font-family: "Proxima Soft", sans-serif;
+}
 
 @custom-variant dark (&:is(.dark *));
 
