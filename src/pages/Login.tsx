@@ -9,16 +9,14 @@ import { useMutation } from "@tanstack/react-query";
 import { login } from "@/api/auth.api";
 
 function Login() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [currentPage, setCurrentPage] = useState("home");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("chicuong@gmail.com");
+  const [password, setPassword] = useState("password");
   const navigate = useNavigate();
 
   const { mutate, isPending } = useMutation({
     mutationFn: login,
     onSuccess() {
-      navigate("/ ");
+      navigate("/");
     },
   });
 

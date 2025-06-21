@@ -1,11 +1,17 @@
 import { Outlet } from "react-router";
 
+import Sidebar from "@/components/shared/Sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+
 function AppLayout() {
   return (
-    <div>
-      <div>AppLayout</div>
-      <Outlet />
-    </div>
+    <SidebarProvider>
+      <Sidebar />
+      <main className="w-full">
+        <SidebarTrigger />
+        <Outlet />
+      </main>
+    </SidebarProvider>
   );
 }
 
